@@ -9,17 +9,18 @@ function compute(){
         return;
   
 }
-
+//formula variables
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
+//calculate interest 
     var interest = principal * years * rate / 100;
 
-
+//year
     var dateNow = new Date();
     var yearNow = parseInt(dateNow.getFullYear()) + parseInt(years);
-  
+//result  
     var resultDisplay = document.getElementById("result");
-    resultDisplay.innerHTML = "If you deposit " + "<span class='highlighResultNumber'>" + principal + "</span>."  + ", <br> at an interest rate of "+ "<span class='highlighResultNumber'>" + rate + "</span>%." + "<br> You will receive an amount of " + "<span class='highlighResultNumber'>" + interest + "</span>" + ", <br> in the year " + "<span class='hhighlighResultNumber'>" + yearNow + "</span>";
+    resultDisplay.innerHTML = "If you deposit " + "<span class='highlight'>" + principal + "</span>."  + ", <br> at an interest rate of "+ "<span class='highlight'>" + rate + "</span>%." + "<br> You will receive an amount of " + "<span class='highlight'>" + interest + "</span>" + ", <br> in the year " + "<span class='highlight'>" + yearNow + "</span>";
   
  function updateRate() 
   {
